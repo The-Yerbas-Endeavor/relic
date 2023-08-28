@@ -68,7 +68,7 @@ extern "C" {
     uint8_t  last_node;
   } blake2b_state;
 
-  typedef struct blake2sp_state__
+  typedef struct ALIGNME( 64 ) blake2sp_state__
   {
     blake2s_state S[8][1];
     blake2s_state R[1];
@@ -77,7 +77,7 @@ extern "C" {
     size_t        outlen;
   } blake2sp_state;
 
-  typedef struct blake2bp_state__
+  typedef struct ALIGNME( 64 ) blake2bp_state__
   {
     blake2b_state S[4][1];
     blake2b_state R[1];
